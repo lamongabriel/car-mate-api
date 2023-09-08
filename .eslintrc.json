@@ -5,10 +5,10 @@
 		"jest": true
 	},
 	"extends": [
-		"prettier",
-		"plugin:prettier/recommended",
 		"airbnb-base",
-		"plugin:@typescript-eslint/recommended"
+		"plugin:@typescript-eslint/recommended",
+		"prettier",
+		"plugin:prettier/recommended"
 	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -21,7 +21,6 @@
 		"eslint-plugin-import-helpers"
 	],
 	"rules": {
-		"quotes": ["error", "double"],
 		"prettier/prettier": "error",
 		"camelcase": "off",
 		"import/no-unresolved": "error",

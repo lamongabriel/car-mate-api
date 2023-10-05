@@ -1,5 +1,15 @@
+// Modules
 import express from "express";
 
-const server = express();
+// Routes
+import categoriesRoutes from "./routes/categories.routes";
 
-server.listen(3000);
+const app = express();
+app.use(express.json());
+
+// Categories routes
+app.use("/categories", categoriesRoutes);
+
+app.listen(3000, () => {
+	console.log("EXPRESS Server initialized");
+});

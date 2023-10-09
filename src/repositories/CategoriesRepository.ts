@@ -29,4 +29,12 @@ export default class CategoriesRepository {
 	list(): Category[] {
 		return this.categories;
 	}
+
+	findByName(name: string): Category | null {
+		const categoryWithName = this.categories.find((cat) => cat.name === name);
+
+		if (categoryWithName) return categoryWithName;
+
+		return null;
+	}
 }

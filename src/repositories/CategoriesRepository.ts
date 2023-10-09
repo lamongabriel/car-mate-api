@@ -25,4 +25,8 @@ export default class CategoriesRepository {
 
 		return newCategory;
 	}
+
+	list(): Category[] {
+		return this.categories;
+	}
 }

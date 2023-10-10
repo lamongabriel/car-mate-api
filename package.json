@@ -1,13 +1,16 @@
 {
-	"name": "second-project",
+	"name": "car-mate-api",
 	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"description": "API for CarMate's vehicle rental and management system",
+	"main": "./src/server.ts",
+	"engines": {
+		"node": "18.x"
+	},
 	"scripts": {
 		"dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn ./src/server.ts"
 	},
-	"author": "",
-	"license": "ISC",
+	"author": "lamongabriel",
+	"license": "MIT",
 	"dependencies": {
 		"express": "^4.18.2",
 		"uuid": "^9.0.1"

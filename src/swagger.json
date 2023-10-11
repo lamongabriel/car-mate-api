@@ -1,0 +1,11 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "Car Mate API Docs",
+		"description": "Car Mate rental service NodeJS API",
+		"version": "1.0.0",
+		"contact": {
+			"email": "lamongabriel@icloud.com"
+		}
+	}
+}

@@ -43,4 +43,8 @@ export default class SpecificationsRepository
 
 		return null;
 	}
+
+	list(): Specification[] {
+		return this.specifications;
+	}
 }

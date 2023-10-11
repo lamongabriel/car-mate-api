@@ -8,7 +8,17 @@ export default class SpecificationsRepository
 {
 	private specifications: Specification[];
 
-	constructor() {
+	private static INSTANCE: SpecificationsRepository;
+
+	public static getInstance(): SpecificationsRepository {
+		if (!this.INSTANCE) {
+			this.INSTANCE = new SpecificationsRepository();
+		}
+
+		return this.INSTANCE;
+	}
+
+	private constructor() {
 		this.specifications = [];
 	}
 

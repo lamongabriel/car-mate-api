@@ -13,6 +13,6 @@ app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerConfig));
 // Routes
 app.use(appRoutes);
 
-app.listen(3000, () => {
+app.listen(3333, () => {
 	console.log("EXPRESS Server initialized");
 });

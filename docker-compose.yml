@@ -1,7 +1,21 @@
 version: "3.7"
 
 services:
+  db:
+    image: postgres
+    container_name: cart-mate-postgres
+    restart: always
+    ports:
+      - ${DATABASE_PORT}:${DATABASE_PORT}
+    environment:
+      POSTGRES_DB: ${DATABASE_DB}
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+    volumes:
+      - pgdata:/data/postgres
   app:
+    depends_on:
+      - db
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,3 +24,7 @@ services:
       - 3333:3333
     volumes:
       - .:/usr/app
+
+volumes:
+  pgdata:
+    driver: local

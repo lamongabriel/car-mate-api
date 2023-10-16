@@ -13,6 +13,7 @@ services:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - pgdata:/data/postgres
+    network_mode: host
   app:
     depends_on:
       - db
@@ -24,6 +25,7 @@ services:
       - 3333:3333
     volumes:
       - .:/usr/app
+    network_mode: host
 
 volumes:
   pgdata:

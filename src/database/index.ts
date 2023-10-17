@@ -1,6 +1,7 @@
 import { DataSource } from "typeorm";
 
 import env from "../env";
+import Category from "../modules/cars/model/Category";
 
 export const AppDataSource = new DataSource({
 	type: "postgres",
@@ -9,11 +10,11 @@ export const AppDataSource = new DataSource({
 	username: env.DATABASE_USER,
 	password: env.DATABASE_PASSWORD,
 	database: env.DATABASE_DB,
-	synchronize: true,
-	logging: true,
-	entities: [],
+	synchronize: false,
+	logging: false,
+	entities: [Category],
 	subscribers: [],
-	migrations: [],
+	migrations: ["src/database/migrations/**/*{.ts,.js}"],
 });
 
 AppDataSource.initialize()

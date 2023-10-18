@@ -1,7 +1,7 @@
 import { DataSource } from "typeorm";
 
 import env from "../env";
-import Category from "../modules/cars/model/Category";
+import Category from "../modules/cars/entities/Category";
 
 export const AppDataSource = new DataSource({
 	type: "postgres",
